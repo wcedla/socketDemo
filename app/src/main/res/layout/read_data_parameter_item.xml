@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/parameterNoHead"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="参数序号:"
+        android:textColor="#000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/parameterNoContent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="15"
+        android:textColor="#000"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@id/parameterNoHead"
+        app:layout_constraintStart_toEndOf="@id/parameterNoHead"
+        app:layout_constraintTop_toTopOf="@id/parameterNoHead" />
+
+    <TextView
+        android:id="@+id/parameterLengthHead"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:text="参数长度:"
+        android:textColor="#000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/parameterNoHead" />
+
+    <TextView
+        android:id="@+id/parameterLengthContent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="13"
+        android:textColor="#000"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@id/parameterLengthHead"
+        app:layout_constraintStart_toEndOf="@id/parameterLengthHead"
+        app:layout_constraintTop_toTopOf="@id/parameterLengthHead" />
+
+    <TextView
+        android:id="@+id/parameterDataHead"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:text="参数值:"
+        android:textColor="#000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/parameterLengthHead" />
+
+    <TextView
+        android:id="@+id/parameterDataContent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:lineSpacingMultiplier="1.5"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"
+        android:layout_marginBottom="10dp"
+        android:text="01 25 63 58 42 26 21 94 98 36 79 36 87 12 45 78 32 04 52 63 04 02 54 75 63 12 54 25 12 36 45 68"
+        android:textColor="#000"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/parameterDataHead"
+        app:layout_constraintTop_toTopOf="@id/parameterDataHead"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

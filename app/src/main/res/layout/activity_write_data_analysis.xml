@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:overScrollMode="never">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/writeOriginTextHead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="接收源数据:"
+            android:textColor="#000"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/writeOriginTextContent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/drawable_border"
+            android:gravity="top"
+            android:minLines="10"
+            android:padding="5dp"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/writeOriginTextHead" />
+
+        <TextView
+            android:id="@+id/writeAnalysisHead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:text="分析结果:"
+            android:textColor="#000"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/writeOriginTextContent" />
+
+        <TextView
+            android:id="@+id/writeError"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:gravity="center"
+            android:text="写入错误"
+            android:textAlignment="center"
+            android:textColor="#f00"
+            android:textSize="15sp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/writeAnalysisHead"
+            app:layout_constraintStart_toEndOf="@id/writeAnalysisHead"
+            app:layout_constraintTop_toTopOf="@id/writeAnalysisHead" />
+
+        <TextView
+            android:id="@+id/writeDeviceNumberHead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:text="设备编码:"
+            android:textColor="#000"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/writeAnalysisHead" />
+
+        <TextView
+            android:id="@+id/writeDeviceNumberContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0000000000000001"
+            android:textColor="#000"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@id/writeDeviceNumberHead"
+            app:layout_constraintStart_toEndOf="@id/writeDeviceNumberHead"
+            app:layout_constraintTop_toTopOf="@id/writeDeviceNumberHead" />
+
+        <TextView
+            android:id="@+id/writeFpgaHead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:text="FPGA版本号:"
+            android:textColor="#000"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/writeDeviceNumberHead" />
+
+        <TextView
+            android:id="@+id/writeFpgaContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1.2"
+            android:textColor="#000"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@id/writeFpgaHead"
+            app:layout_constraintStart_toEndOf="@id/writeFpgaHead"
+            app:layout_constraintTop_toTopOf="@id/writeFpgaHead" />
+
+        <TextView
+            android:id="@+id/writeSoftwareVersionHead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:text="软件版本号:"
+            android:textColor="#000"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/writeFpgaHead" />
+
+        <TextView
+            android:id="@+id/writeSoftwareVersionContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2.1"
+            android:textColor="#000"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@id/writeSoftwareVersionHead"
+            app:layout_constraintStart_toEndOf="@id/writeSoftwareVersionHead"
+            app:layout_constraintTop_toTopOf="@id/writeSoftwareVersionHead" />
+
+        <TextView
+            android:id="@+id/writeDataLengthHead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:text="数据长度:"
+            android:textColor="#000"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/writeSoftwareVersionHead" />
+
+        <TextView
+            android:id="@+id/writeDataLengthContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="15"
+            android:textColor="#000"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@id/writeDataLengthHead"
+            app:layout_constraintStart_toEndOf="@id/writeDataLengthHead"
+            app:layout_constraintTop_toTopOf="@id/writeDataLengthHead" />
+
+        <LinearLayout
+            android:id="@+id/writeParameterRoot"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/writeDataLengthHead">
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/writeCrcHead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="CRC校验:"
+            android:textColor="#000"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/writeParameterRoot" />
+
+        <TextView
+            android:id="@+id/writeCrcContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="25 CD"
+            android:textColor="#000"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@id/writeCrcHead"
+            app:layout_constraintStart_toEndOf="@id/writeCrcHead"
+            app:layout_constraintTop_toTopOf="@id/writeCrcHead" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

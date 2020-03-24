@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:overScrollMode="never">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+
+        <TextView
+            android:id="@+id/writeIpHead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="目标ip地址:"
+            android:textColor="#000"
+            app:layout_constraintBottom_toBottomOf="@id/writeIpInput"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/writeIpInput" />
+
+        <EditText
+            android:id="@+id/writeIpInput"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:textColor="#000"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/writeIpHead"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/writePortHead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="目标端口:"
+            android:textColor="#000"
+            app:layout_constraintBottom_toBottomOf="@id/writePortInput"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/writePortInput" />
+
+        <EditText
+            android:id="@+id/writePortInput"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:textColor="#000"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/writePortHead"
+            app:layout_constraintTop_toBottomOf="@id/writeIpInput" />
+
+        <View
+            android:id="@+id/splitView"
+            android:layout_width="0dp"
+            android:layout_height="1sp"
+            android:layout_marginTop="10dp"
+            android:background="#000"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/writePortInput" />
+
+        <RadioButton
+            android:id="@+id/rebootRadio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:checked="true"
+            android:text="重启设备"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/splitView" />
+
+        <RadioButton
+            android:id="@+id/frequencyRadio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:text="扫描频段"
+            app:layout_constraintStart_toEndOf="@id/rebootRadio"
+            app:layout_constraintTop_toBottomOf="@id/splitView" />
+
+        <RadioButton
+            android:id="@+id/scanModeRadio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:text="扫描模式"
+            app:layout_constraintStart_toEndOf="@id/frequencyRadio"
+            app:layout_constraintTop_toBottomOf="@id/splitView" />
+
+        <RadioButton
+            android:id="@+id/environmentRadio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="环境模式"
+            app:layout_constraintStart_toStartOf="@id/rebootRadio"
+            app:layout_constraintTop_toBottomOf="@id/rebootRadio" />
+
+        <RadioButton
+            android:id="@+id/imgRadio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="图传模式"
+            app:layout_constraintStart_toStartOf="@id/frequencyRadio"
+            app:layout_constraintTop_toBottomOf="@id/frequencyRadio" />
+
+        <TextView
+            android:id="@+id/tips"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="20dp"
+            android:lineSpacingMultiplier="1.5"
+            android:text="说明:\n1.重启设备发送reboot\n2.扫描频段为400-3000、3001-6000\n3.扫描模式为扇区扫描，选中8个扫描单元\n4.环境模式设置为郊区模式\n5.监测模式为图传"
+            android:textColor="#f00"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imgRadio" />
+
+        <Button
+            android:id="@+id/writeSend"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="30dp"
+            android:text="发送"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tips" />
+
+        <TextView
+            android:id="@+id/writeReceive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="15dp"
+            android:text="接收区:"
+            android:textColor="#000000"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/writeSend" />
+
+        <TextView
+            android:id="@+id/writeClearReceive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:text="清空"
+            android:textColor="#f00"
+            app:layout_constraintBottom_toBottomOf="@id/writeReceive"
+            app:layout_constraintStart_toEndOf="@id/writeReceive"
+            app:layout_constraintTop_toTopOf="@id/writeReceive" />
+
+        <TextView
+            android:id="@+id/writeAnalysisData"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:visibility="gone"
+            android:text="解析数据"
+            android:textColor="#f00"
+            app:layout_constraintBottom_toBottomOf="@+id/writeClearReceive"
+            app:layout_constraintStart_toEndOf="@id/writeClearReceive"
+            app:layout_constraintTop_toTopOf="@id/writeClearReceive" />
+
+        <TextView
+            android:id="@+id/writeReceiveContent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/drawable_border"
+            android:gravity="top"
+            android:minLines="10"
+            android:padding="5dp"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/writeReceive" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

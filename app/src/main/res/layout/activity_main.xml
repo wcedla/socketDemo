@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:overScrollMode="never">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+
+        <TextView
+            android:id="@+id/ipHead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="目标ip地址:"
+            android:textColor="#000"
+            app:layout_constraintBottom_toBottomOf="@id/ipInput"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/ipInput" />
+
+        <EditText
+            android:id="@+id/ipInput"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:textColor="#000"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ipHead"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/portHead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="目标端口:"
+            android:textColor="#000"
+            app:layout_constraintBottom_toBottomOf="@id/portInput"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/portInput" />
+
+        <EditText
+            android:id="@+id/portInput"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:textColor="#000"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/portHead"
+            app:layout_constraintTop_toBottomOf="@id/ipInput" />
+
+        <View
+            android:id="@+id/splitView"
+            android:layout_width="0dp"
+            android:layout_height="1sp"
+            android:layout_marginTop="10dp"
+            android:background="#000"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/portInput" />
+
+        <CheckBox
+            android:id="@+id/hexSelect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:checked="true"
+            android:text="16进制（不勾选为10进制）"
+            android:textColor="#000"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/splitView" />
+
+        <Button
+            android:id="@+id/sendButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="发送"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@id/hexSelect"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/hexSelect" />
+
+        <TextView
+            android:id="@+id/sendHead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginTop="10dp"
+            android:text="发送区:"
+            android:textColor="#000"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/hexSelect" />
+
+        <TextView
+            android:id="@+id/sendClear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="清空"
+            android:textColor="#f00"
+            app:layout_constraintBottom_toBottomOf="@id/sendHead"
+            app:layout_constraintStart_toEndOf="@id/sendHead"
+            app:layout_constraintTop_toTopOf="@id/sendHead" />
+
+        <TextView
+            android:id="@+id/paraSelect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="参数选择"
+            android:textColor="#f00"
+            app:layout_constraintBottom_toBottomOf="@id/sendHead"
+            app:layout_constraintStart_toEndOf="@id/sendClear"
+            app:layout_constraintTop_toTopOf="@id/sendHead" />
+
+
+        <EditText
+            android:id="@+id/sendInput"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/drawable_border"
+            android:gravity="top"
+            android:minLines="10"
+            android:padding="5dp"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/sendHead" />
+
+        <TextView
+            android:id="@+id/receiveHead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginTop="10dp"
+            android:text="接收区:"
+            android:textColor="#000"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/sendInput" />
+
+        <TextView
+            android:id="@+id/receiveClear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="清空"
+            android:textColor="#f00"
+            app:layout_constraintBottom_toBottomOf="@id/receiveHead"
+            app:layout_constraintStart_toEndOf="@id/receiveHead"
+            app:layout_constraintTop_toTopOf="@id/receiveHead" />
+
+        <TextView
+            android:id="@+id/dataAnalysis"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="内容解析"
+            android:textColor="#f00"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/receiveClear"
+            app:layout_constraintStart_toEndOf="@id/receiveClear"
+            app:layout_constraintTop_toTopOf="@id/receiveClear" />
+
+        <TextView
+            android:id="@+id/receiveContent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/drawable_border"
+            android:gravity="top"
+            android:minLines="10"
+            android:padding="5dp"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/receiveHead" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

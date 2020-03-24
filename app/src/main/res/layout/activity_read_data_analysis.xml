@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:overScrollMode="never"
+    tools:context=".activity.ReadDataAnalysisActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/originTextHead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="接收源数据:"
+            android:textColor="#000"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/originTextContent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/drawable_border"
+            android:gravity="top"
+            android:minLines="10"
+            android:padding="5dp"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/originTextHead" />
+
+        <TextView
+            android:id="@+id/analysisHead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="10dp"
+            android:paddingTop="10dp"
+            android:text="分析结果:"
+            android:textColor="#000"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/originTextContent" />
+
+        <TextView
+            android:id="@+id/deviceNumberHead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:text="设备编码:"
+            android:textColor="#000"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/analysisHead" />
+
+        <TextView
+            android:id="@+id/deviceNumberContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0000000000000001"
+            android:textColor="#000"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@id/deviceNumberHead"
+            app:layout_constraintStart_toEndOf="@id/deviceNumberHead"
+            app:layout_constraintTop_toTopOf="@id/deviceNumberHead" />
+
+        <TextView
+            android:id="@+id/fpgaHead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:text="FPGA版本号:"
+            android:textColor="#000"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/deviceNumberHead" />
+
+        <TextView
+            android:id="@+id/fpgaContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1.2"
+            android:textColor="#000"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@id/fpgaHead"
+            app:layout_constraintStart_toEndOf="@id/fpgaHead"
+            app:layout_constraintTop_toTopOf="@id/fpgaHead" />
+
+        <TextView
+            android:id="@+id/softwareVersionHead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:text="软件版本号:"
+            android:textColor="#000"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fpgaHead" />
+
+        <TextView
+            android:id="@+id/softwareVersionContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2.1"
+            android:textColor="#000"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@id/softwareVersionHead"
+            app:layout_constraintStart_toEndOf="@id/softwareVersionHead"
+            app:layout_constraintTop_toTopOf="@id/softwareVersionHead" />
+
+        <TextView
+            android:id="@+id/dataLengthHead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:text="数据长度:"
+            android:textColor="#000"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/softwareVersionHead" />
+
+        <TextView
+            android:id="@+id/dataLengthContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="15"
+            android:textColor="#000"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@id/dataLengthHead"
+            app:layout_constraintStart_toEndOf="@id/dataLengthHead"
+            app:layout_constraintTop_toTopOf="@id/dataLengthHead" />
+
+        <LinearLayout
+            android:id="@+id/parameterRoot"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/dataLengthHead">
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/crcHead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="CRC校验:"
+            android:textColor="#000"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/parameterRoot" />
+
+        <TextView
+            android:id="@+id/crcContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="25 CD"
+            android:textColor="#000"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@id/crcHead"
+            app:layout_constraintStart_toEndOf="@id/crcHead"
+            app:layout_constraintTop_toTopOf="@id/crcHead" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

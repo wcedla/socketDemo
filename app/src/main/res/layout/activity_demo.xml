@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.DemoActivity">
+
+    <Button
+        android:id="@+id/sendData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:text="发送数据"
+        android:textAlignment="center"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/stopReceive"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="停止接收"
+        app:layout_constraintBottom_toBottomOf="@id/sendData"
+        app:layout_constraintStart_toEndOf="@id/sendData"
+        app:layout_constraintTop_toTopOf="@id/sendData" />
+
+    <Button
+        android:id="@+id/testButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="测试1"
+        app:layout_constraintBottom_toBottomOf="@id/stopReceive"
+        app:layout_constraintStart_toEndOf="@id/stopReceive"
+        app:layout_constraintTop_toTopOf="@id/stopReceive" />
+
+    <Button
+        android:id="@+id/test2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="测试2"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@id/testButton"
+        app:layout_constraintStart_toEndOf="@id/testButton"
+        app:layout_constraintTop_toTopOf="@id/testButton" />
+
+    <Button
+        android:id="@+id/test3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="测试3"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@id/sendData"
+        app:layout_constraintTop_toBottomOf="@id/sendData" />
+
+    <Button
+        android:id="@+id/test4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="测试4"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@id/test3"
+        app:layout_constraintStart_toEndOf="@id/test3"
+        app:layout_constraintTop_toTopOf="@id/test3" />
+
+    <TextView
+        android:id="@+id/receiveData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/test3" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
